@@ -1,6 +1,4 @@
-# Proyecto de Inicio de Sesión
-
-Este es un proyecto simple de una página de inicio de sesión.
+# Authify
 
 ## Objetivo del Proyecto
 
