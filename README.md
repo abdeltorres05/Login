@@ -3,6 +3,8 @@
 ## [Objetivo del Proyecto](https://github.com/abdeltorres05/Login)
 
 ## [Hitos](https://github.com/abdeltorres05/Login/milestones)
+<!-- MILESTONES-START -->
+<!-- MILESTONES-END -->
 
 ## [WorkFlow](https://github.com/abdeltorres05/Login/blob/main/.github/workflows/main.yml)
 
