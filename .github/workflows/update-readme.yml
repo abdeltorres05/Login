@@ -19,7 +19,7 @@ jobs:
       - name: Execute script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node .github/workflows/updateMilestones.js
+        run: node .github/workflows/updateMilestones.mjs
       - name: Commit & Push
         run: |
           git config --global user.email "accion@github.com"
