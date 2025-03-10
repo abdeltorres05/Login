@@ -1,5 +1,5 @@
-const { Octokit } = require("@octokit/rest");
-const fs = require("fs");
+import { Octokit } from '@octokit/rest';
+import fs from 'fs';
 
 // Extraer owner y repo de la variable de entorno
 const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
