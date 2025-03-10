@@ -1,0 +1,29 @@
+name: Update README whit Milestones list
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Config Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install dependencies
+        run: npm install @octokit/rest
+      - name: Execute script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/workflows/updateMilestones.js
+      - name: Commit & Push
+        run: |
+          git config --global user.email "accion@github.com"
+          git config --global user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update milestons list" || echo "No changes"
+          git push
